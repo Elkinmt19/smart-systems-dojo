@@ -23,6 +23,9 @@ Matplotlib is a comprehensive library for creating static, animated, and interac
 * [Matlab](https://matlab.mathworks.com/) <br>
 MATLAB is the easiest and most productive computing environment for engineers and scientists. With math, graphics, and programming, it's designed for the way you think and the work you do.
 
+* [Simulink](https://la.mathworks.com/products/simulink.html) <br>
+Design and simulate your system in Simulink before converting it to hardware.
+
 ## AUTHOR
 
 ## Elkin Javier Guerra Galeano <img src="https://github.com/Elkinmt19/computer-vision-dojo/blob/main/assets/imgs/robotboy_fly.gif"/>
