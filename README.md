@@ -3,7 +3,7 @@
 This is a repository for learning more about AI, neural networks and intelligent systems and integrating all these topics into the world of robotics. <br>  
  <img src="https://github.com/Elkinmt19/smart-systems-dojo/blob/main/assets/imgs/ai-sun-type.gif"
       width="410"/>
- <img src="https://github.com/Elkinmt19/smart-systems-dojo/blob/main/assets/imgs/ai-sleeping.gif"
+ <img src="https://github.com/Elkinmt19/smart-systems-dojo/blob/main/assets/imgs/ai-ai.gif"
       width="410"/>
 
 ## SOFTWARE DEPENDENCIES :computer:
