@@ -6,7 +6,7 @@ This is a repository for learning more about AI, neural networks and intelligent
  <img src="https://github.com/Elkinmt19/smart-systems-dojo/blob/main/assets/imgs/ai-sleeping.gif"
       width="410"/>
 
-## SOFTWARE DEPENDENCIES :computer:
+## SOFTWARE DEPENDENCIES :computer: :brain:
 ### PYTHON DEPENDENCIES
 * [Python](https://www.python.org/) <br>
 Python is a programming language that lets you work quickly and integrate systems more effectively.  
@@ -20,12 +20,8 @@ Numpy is a general-purpose array-processing package. It provides a high-performa
 Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 
 ### MATLAB DEPENDENCIES
-* [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) <br>
-The Microsoft C++ Build Tools provides MSVC toolsets via a scriptable, standalone installer without Visual Studio. Recommended if you build C++ libraries and applications targeting Windows from the command-line (e.g. as part of your continuous integration workflow). Includes tools shipped in Visual Studio 2015 Update 3, Visual Studio 2017 version 15.9, and all major updates to Visual Studio 2019 (v16.x). 
-* [OpenCV](https://opencv.org/) <br>
-OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly aimed at real-time computer vision.
-* [cmake](https://cmake.org/) <br>
-CMake is an open-source, cross-platform family of tools designed to build, test and package software. 
+* [Matlab](https://matlab.mathworks.com/) <br>
+MATLAB is the easiest and most productive computing environment for engineers and scientists. With math, graphics, and programming, it's designed for the way you think and the work you do.
 
 ## AUTHOR
 
