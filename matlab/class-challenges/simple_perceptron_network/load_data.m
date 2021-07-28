@@ -43,20 +43,20 @@ W = 2.*rand(ns,ne)-1;
 Yk = zeros(ns,nd);
 
 % Create the mean square error's matrix 
-ecm = zeros(ns,nit);
+mse = zeros(ns,nit);
 
 % The network training begin
 fprintf("Training....\n");
 for i = 1:nit
-    [Yk, ecm(:,i), W] = feedForwardPerceptron(alpha, inputs, desired, W, 1);
+    [Yk, mse(:,i), W] = feed_forward_perceptron(alpha, inputs, desired, W, 1);
     fprintf("ECM iteration %d",i);
-    disp(ecm(:,i));
+    disp(mse(:,i));
     fprintf('\n');
 end
 
-plot(ecm, "LineWidth", 2);
+plot(mse, "LineWidth", 2);
 title("PERCEPTRON NEURAL NETWORK TRAINING");
-xlabel("Iterations (k)"); ylabel("Mean Square Error (ecm(k))"); grid on;
+xlabel("Iterations (k)"); ylabel("Mean Square Error (mse(k))"); grid on;
 
 fprintf("Trained W is: \n");
 disp(W);
