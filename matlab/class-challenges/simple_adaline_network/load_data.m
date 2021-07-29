@@ -1,7 +1,7 @@
 %{
-    This is a simple script to load the data set for the perceptron 
+    This is a simple script to load the data set for the adaline 
     neural network.
-    This program analyzes a data set and makes the perceptron neural
+    This program analyzes a data set and makes the adaline neural
     network learn, in order to get a good model at the end.
 
     @ Elkin Javier Guerra Galenao - EIA University
@@ -12,10 +12,7 @@ clear; close all; clc;
 
 % Load the database
 fprintf("Loading database....");
-load("mat-files/AND.mat");
-
-% Add the BIAS
-inputs = [ones(1,size(inputs,2)); inputs];
+load("mat-files/BIN_DEC.mat");
 
 % Analyze the database
 nd = size(inputs,2);
@@ -48,17 +45,16 @@ mse = zeros(ns,nit);
 % The network training begin
 fprintf("Training....\n");
 for i = 1:nit
-    [Yk, mse(:,i), W] = feed_forward_perceptron(alpha, inputs, desired, W, 1);
+    [Yk, mse(:,i), W] = feed_forward_adaline(alpha, inputs, desired, W, 1);
     fprintf("ECM iteration %d",i);
     disp(mse(:,i));
     fprintf('\n');
 end
 
 plot(mse, "LineWidth", 2);
-title("PERCEPTRON NEURAL NETWORK TRAINING");
+title("ADALINE NEURAL NETWORK TRAINING");
 xlabel("Iterations (k)"); ylabel("Mean Square Error (mse(k))"); grid on;
 
 fprintf("Trained W is: \n");
 disp(W);
 
-plotconfusion(desired, Yk)
