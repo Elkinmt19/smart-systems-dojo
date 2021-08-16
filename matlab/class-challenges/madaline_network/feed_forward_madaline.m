@@ -5,7 +5,8 @@ function [Yk, mse, C, W] = feed_forward_madaline(alpha, inputs, desired, W, C, t
         :param alpha: The learning power
         :param inputs: Inputs of the system
         :param desired: Desired outputs of the system
-        :param W: Neural weight matrix
+        :param W: Neural weight matrix (First layer)
+        :param C: Neural weight matrix (Second layer)
         :param train: Training flag
     %}
 

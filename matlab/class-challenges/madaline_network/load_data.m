@@ -65,7 +65,7 @@ end
 Yk = Yk.*maxdesired;
 
 plot(mse, "LineWidth", 2);
-title("ADALINE NEURAL NETWORK TRAINING");
+title("MADALINE NEURAL NETWORK TRAINING");
 xlabel("Iterations (k)"); ylabel("Mean Square Error (mse(k))"); grid on;
 
 fprintf("Trained W is: \n");
