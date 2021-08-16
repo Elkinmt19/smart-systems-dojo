@@ -44,7 +44,7 @@ fprintf("OK...\n");
 
 % Create the neural weight's matrix
 W = 2.*rand(no,ne)-1;
-C = 3.*rand(ns,no+1)-1;
+C = 2.*rand(ns,no+1)-1;
 
 % Create output vector
 Yk = zeros(ns,nd);
