@@ -36,7 +36,7 @@ function [Yk, mse, C, W] = feed_forward_madaline(alpha, inputs, desired, W, C, t
         Ak = C*Hj;
         
         % Calculate the activation function (Output layer)
-        Yk(:,i) = 1./(1 + exp(-Ak)); % Sigmoidal function
+        Yk(:,i) = Ak; % Sigmoidal function
         
         % Calculate the error 
         Ek = desired(:,i) - Yk(:,i);
@@ -47,7 +47,7 @@ function [Yk, mse, C, W] = feed_forward_madaline(alpha, inputs, desired, W, C, t
         % Train!!!
         if train
             % Calculate the sensitivity (Output layer)
-            ds = Ek.*(Yk(:,i).*(1-Yk(:,i)));
+            ds = Ek;
             
             % Calcuate the sensitivity (Hidden layer)
             dh = (ds'*C(:,2:end)).*(Hj(2:end).*(1-Hj(2:end)))';
