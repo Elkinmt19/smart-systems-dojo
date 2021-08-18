@@ -14,6 +14,11 @@ clear; close all; clc;
 fprintf("Loading database....");
 load("mat-files/BIN_DEC.mat");
 
+% Normalize the dataset
+maxdesired = max(max(abs(desired)));
+inputs = inputs/max(max(abs(inputs)));
+desired = desired/maxdesired;
+
 % Analyze the database
 nd = size(inputs,2);
 ne = size(inputs,1);
@@ -50,6 +55,9 @@ for i = 1:nit
     disp(mse(:,i));
     fprintf('\n');
 end
+
+% Unnormalize the Yk
+Yk = Yk.*maxdesired;
 
 plot(mse, "LineWidth", 2);
 title("ADALINE NEURAL NETWORK TRAINING");

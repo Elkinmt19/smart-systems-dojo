@@ -14,6 +14,11 @@ clear; close all; clc;
 fprintf("Loading database....");
 load("mat-files/AND.mat");
 
+% Normalize the dataset
+maxdesired = max(max(abs(desired)));
+inputs = inputs/max(max(abs(inputs)));
+desired = desired/maxdesired;
+
 % Add the BIAS
 inputs = [ones(1,size(inputs,2)); inputs];
 
@@ -53,6 +58,9 @@ for i = 1:nit
     disp(mse(:,i));
     fprintf('\n');
 end
+
+% Unnormalize the Yk
+Yk = Yk.*maxdesired;
 
 plot(mse, "LineWidth", 2);
 title("PERCEPTRON NEURAL NETWORK TRAINING");

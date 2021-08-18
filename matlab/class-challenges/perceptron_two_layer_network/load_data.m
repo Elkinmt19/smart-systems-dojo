@@ -15,8 +15,8 @@ fprintf("Loading database....");
 load("mat-files/DINAMICA_COMPLETA_MASA_RESORTE.mat");
 
 % Normalize the dataset
-maxdesired = (max(desired));
-inputs = inputs/max(max(inputs));
+maxdesired = max(max(abs(desired)));
+inputs = inputs/max(max(abs(inputs)));
 desired = desired/maxdesired;
 
 % Analyze the database
