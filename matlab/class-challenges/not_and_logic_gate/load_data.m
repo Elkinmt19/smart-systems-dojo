@@ -1,7 +1,7 @@
 %{
-    This is a simple script to load the data set for the adaline 
+    This is a simple script to load the data set for the perceptron 
     neural network.
-    This program analyzes a data set and makes the adaline neural
+    This program analyzes a data set and makes the perceptron neural
     network learn, in order to get a good model at the end.
 
     @ Elkin Javier Guerra Galenao - EIA University
@@ -12,12 +12,15 @@ clear; close all; clc;
 
 % Load the database
 fprintf("Loading database....");
-load("mat-files/STRAIGHT_LINE_3X.mat");
+load("mat-files/NOT_AND.mat");
 
 % Normalize the dataset
 maxdesired = max(max(abs(desired)));
 inputs = inputs/max(max(abs(inputs)));
 desired = desired/maxdesired;
+
+% Add the BIAS
+inputs = [ones(1,size(inputs,2)); inputs];
 
 % Analyze the database
 nd = size(inputs,2);
@@ -50,7 +53,7 @@ mse = zeros(ns,nit);
 % The network training begin
 fprintf("Training....\n");
 for i = 1:nit
-    [Yk, mse(:,i), W] = feed_forward_adaline(alpha, inputs, desired, W, 1);
+    [Yk, mse(:,i), W] = feed_forward_perceptron(alpha, inputs, desired, W, 1);
     fprintf("ECM iteration %d",i);
     disp(mse(:,i));
     fprintf('\n');
@@ -59,15 +62,11 @@ end
 % Unnormalize the Yk
 Yk = Yk.*maxdesired;
 
-figure()
 plot(mse, "LineWidth", 2);
-title("ADALINE NEURAL NETWORK TRAINING");
+title("PERCEPTRON NEURAL NETWORK TRAINING");
 xlabel("Iterations (k)"); ylabel("Mean Square Error (mse(k))"); grid on;
-
-figure()
-plot(Yk, "LineWidth", 2);
-title("TRAINED OUTPUT");
 
 fprintf("Trained W is: \n");
 disp(W);
 
+plotconfusion(desired, Yk)
