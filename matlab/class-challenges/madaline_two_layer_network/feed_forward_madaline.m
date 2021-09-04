@@ -36,7 +36,7 @@ function [Yk, mse, C, W] = feed_forward_madaline(alpha, inputs, desired, W, C, t
         Ak = C*Hj;
         
         % Calculate the activation function (Output layer)
-        Yk(:,i) = Ak; % Sigmoidal function
+        Yk(:,i) = Ak; % Lineal function
         
         % Calculate the error 
         Ek = desired(:,i) - Yk(:,i);

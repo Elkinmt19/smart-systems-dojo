@@ -12,7 +12,7 @@ clear; close all; clc;
 
 % Load the database
 fprintf("Loading database....");
-load("mat-files/DINAMICA_COMPLETA_MASA_RESORTE.mat");
+load("mat-files/PERSONS_LIKES.mat");
 
 % Normalize the dataset
 maxdesired = max(max(abs(desired)));
@@ -64,10 +64,10 @@ end
 % Unnormalize the Yk
 Yk = Yk.*maxdesired;
 
-plot(mse, "LineWidth", 2);
-title("PERCEPTRON NEURAL NETWORK TRAINING");
-xlabel("Iterations (k)"); ylabel("Mean Square Error (mse(k))"); grid on;
+% Plot the confusion matrix
+plotconfusion(desired, Yk)
 
+% Show the W trained
 fprintf("Trained W is: \n");
 disp(W);
 
