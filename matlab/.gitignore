@@ -1,6 +1,9 @@
 # Matlab ignores 
 *.asv
 
+# Simulinks ignores
+slprj
+
 # C extensions
 *.so
 
