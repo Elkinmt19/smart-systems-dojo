@@ -3,6 +3,7 @@
 
 # Simulinks ignores
 slprj
+*.slxc
 
 # C extensions
 *.so
