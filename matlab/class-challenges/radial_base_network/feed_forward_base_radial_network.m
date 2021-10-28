@@ -1,4 +1,20 @@
 function [Yk, ecm, Cji, Wkj, Dj] = feed_forward_base_radial_network(inputs, ne, no, Cji, Dj, Wkj, desired, alpha, ns, nd, train)
+    %{
+        This is a function that goes through the data set and trains a
+        base radial neural network.
+        :param ne: Number of inputs
+        :param no: Number of classes
+        :param ns: Number of outputs
+        :param nd: Number of samples
+        :param alpha: The learning power
+        :param inputs: Inputs of the system
+        :param desired: Desired outputs of the system
+        :param Wkj: Neural weight matrix (Output layer)
+        :param Cji: Centers of the Gaussian Bells (Hidden layer)
+        :param Dj: Diameters of the Gaussian Bells 
+        :param train: Training flag
+    %}
+
     % Define important variables of the network
     Hj = zeros(no+1,1);
     Yk = zeros(ns,nd);
