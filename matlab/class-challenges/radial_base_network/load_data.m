@@ -11,8 +11,8 @@
 clear ; close all; clc
 
 % Load the database
-fprintf('Cargando datos de entrada y desired ...\n')
-load('mat-files/data_iris.mat');
+fprintf('Loading the dataset ...\n')
+load('mat-files/data_wines.mat');
 
 % Normalize the dataset
 maxdesired = max(max(abs(desired)));
